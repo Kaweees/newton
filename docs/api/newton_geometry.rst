@@ -16,6 +16,7 @@ newton.geometry
    BroadPhaseAllPairs
    BroadPhaseExplicit
    BroadPhaseSAP
+   ContactModelGMCP
    DeformableVisualMesh
    DeformableVisuals
    HydroelasticSDF

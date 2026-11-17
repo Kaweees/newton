@@ -1,0 +1,1 @@
+Add experimental Warp `newton.geometry.ContactModelGMCP` with mixed-dimensional clipping, barrier forces, lagged PSD Hessian products, and a linearized gap step bound. Include CPU/CUDA numerical tests.
