@@ -41,7 +41,7 @@ method details. For symptom-driven diagnosis and parameter tuning, start with
 Choosing a Solver
 -----------------
 
-MuJoCo, Kamino, and VBD currently have dedicated backend guides:
+The following solvers have dedicated backend guides:
 
 - :doc:`MuJoCo <mujoco>` — generalized-coordinate rigid-body simulation and
   MuJoCo or MJCF workflows.
@@ -49,6 +49,8 @@ MuJoCo, Kamino, and VBD currently have dedicated backend guides:
   and hard frictional contacts; experimental.
 - :doc:`VBD <vbd>` — unified simulation of cloth, soft bodies, and rigid
   bodies in a single VBD-based solver; experimental.
+- :doc:`libuipc / IsaacIPC <uipc>` — optional CUDA IPC backend for
+  tetrahedral deformables and prescribed collision obstacles; experimental.
 
 The other solver backends are documented through their linked API references
 and the comparison tables below.
@@ -143,6 +145,15 @@ Supported Features
      - ✅
      - ✅
      - ❌
+     - ❌
+     - ❌
+   * - :class:`~newton.solvers.SolverUIPC`
+     - Implicit (backward Euler)
+     - 🟨 prescribed obstacles only
+     - ❌
+     - 🟨 tetrahedral vertices only
+     - ❌
+     - ✅
      - ❌
      - ❌
    * - :class:`~newton.solvers.SolverVBD`

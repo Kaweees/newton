@@ -65,6 +65,7 @@ class TestLazySolverImports(unittest.TestCase):
             "mujoco",
             "semi_implicit",
             "style3d",
+            "uipc",
             "vbd",
             "xpbd",
         )
@@ -76,6 +77,10 @@ class TestLazySolverImports(unittest.TestCase):
         )
         result = _run_in_fresh_interpreter(code)
         self.assertEqual(result.stdout.strip(), "", f"solver modules imported eagerly: {result.stdout.strip()}")
+        result = _run_in_fresh_interpreter(
+            "import sys; from newton.solvers import SolverUIPC; assert 'uipc' not in sys.modules"
+        )
+        self.assertEqual(result.stdout.strip(), "")
 
     def test_public_exports_match_internal_exports(self):
         """Expose the internal solver surface through the public module."""

@@ -1,0 +1,1 @@
+Add experimental `newton.solvers.SolverUIPC` and the optional `uipc` extra for tetrahedral deformables using libuipc, the IPC backend used by IsaacIPC, with external forces, pinned vertices, isolated worlds, prescribed plane/box/mesh obstacles, and USD volume import. GMCP and the Isaac Sim bridge are not included.

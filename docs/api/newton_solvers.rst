@@ -44,5 +44,6 @@ https://newton-physics.github.io/newton/stable/solvers/index.html.
    SolverSemiImplicit
    SolverSteel
    SolverStyle3D
+   SolverUIPC
    SolverVBD
    SolverXPBD
